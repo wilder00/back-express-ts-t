@@ -2,12 +2,13 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
+  "prettier.enable": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    "typescript"
-  ],
+  "eslint.validate": ["javascript", "typescript"],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -15,8 +16,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.language": "en,es-ES",
-  "cSpell.words": [
-    "express",
-    "tseslint"
-  ]
+  "cSpell.words": ["express", "tseslint"]
 }
