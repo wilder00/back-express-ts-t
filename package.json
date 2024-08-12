@@ -18,6 +18,7 @@
     "coverage": "vitest run --coverage",
     "coverage:show": "http-server -o ./coverage/index.html -p 6001",
     "coverage:show-lcov": "http-server -o ./coverage/index.html -p 6001",
+    "coverage:verify-lcov": "lcov-total ./coverage/lcov.info --gte=10",
     "prepare": "husky"
   },
   "keywords": [],
@@ -36,6 +37,7 @@
     "eslint": "9.9.0",
     "http-server": "14.1.1",
     "husky": "9.1.4",
+    "lcov-total": "2.1.1",
     "onchange": "7.1.0",
     "prettier": "3.3.3",
     "tsconfig-paths": "4.2.0",
