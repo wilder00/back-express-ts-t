@@ -16,5 +16,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.language": "en,es-ES",
-  "cSpell.words": ["express", "tseslint"]
+  "cSpell.words": ["express", "lcov", "tseslint"]
 }

@@ -1,4 +1,5 @@
-import { sum } from '../../src/utils/sum'
+import { sum } from '@/utils/sum'
+import { describe, expect, test } from 'vitest'
 
 describe('sum', () => {
   test('adds 1 + 2 to equal 3', () => {

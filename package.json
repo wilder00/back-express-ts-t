@@ -5,7 +5,9 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "start": "npx tsc && node dist/index.js",
+    "start": "node dist/index.js",
+    "build": "npx tsc",
+    "dev": "nodemon",
     "format:fix": "prettier --ignore-path .prettierignore --write .",
     "format:check": "prettier --ignore-path .prettierignore --check .",
     "format:watch": "onchange \"**/*\" -- prettier --write --ignore-path .prettierignore --ignore-unknown {{changed}}",
@@ -14,6 +16,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
+    "coverage:show": "http-server -o ./coverage/index.html -p 6001",
+    "coverage:show-lcov": "http-server -o ./coverage/index.html -p 6001",
     "prepare": "husky"
   },
   "keywords": [],
@@ -28,10 +32,13 @@
     "@eslint/js": "9.9.0",
     "@types/eslint__js": "8.42.3",
     "@types/express": "4.17.21",
+    "@vitest/coverage-v8": "2.0.5",
     "eslint": "9.9.0",
+    "http-server": "14.1.1",
     "husky": "9.1.4",
     "onchange": "7.1.0",
     "prettier": "3.3.3",
+    "tsconfig-paths": "4.2.0",
     "typescript": "5.5.4",
     "typescript-eslint": "8.0.1",
     "vitest": "2.0.5"
