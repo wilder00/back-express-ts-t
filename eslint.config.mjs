@@ -24,9 +24,7 @@ export default tseslint.config(
       // Add more ESLint rules here as needed
       //'no-console': ['warn', { allow: ['warn', 'error'] }],
       'no-debugger': 'error',
-      eqeqeq: ['error', 'always'],
-      'no-unused-vars': 'error', // Conflicts with @typescript-eslint/no-unused-vars
-      'no-empty-function': 'error' // Conflicts with @typescript-eslint/no-empty-function
+      eqeqeq: ['error', 'always']
     }
   },
   {

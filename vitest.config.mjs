@@ -7,6 +7,7 @@ dotenv.config({ path: '.env.local', override: true })
 
 export default defineConfig({
   test: {
+    environment: 'node',
     globals: true,
     exclude: [...configDefaults.exclude],
     coverage: {
