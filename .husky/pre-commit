@@ -1,1 +1,5 @@
-pnpm run format:check && pnpm run lint:check && pnpm run coverage && echo 'verificando el coverage...' && pnpm coverage:verify-lcov
+pnpm run format:check && \
+pnpm run lint:check && \
+pnpm run coverage && \
+echo 'verificando el coverage...' && \
+pnpm coverage:verify-lcov
