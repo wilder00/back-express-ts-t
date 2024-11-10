@@ -3,6 +3,8 @@
     "source.organizeImports": "explicit"
   },
   "prettier.enable": true,
+  /*using lf for end of line instead of crlf*/
+  "files.eol": "\n",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "eslint.validate": ["javascript", "typescript"],
@@ -16,5 +18,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.language": "en,es-ES",
-  "cSpell.words": ["express", "lcov", "tseslint"]
+  "cSpell.words": ["express", "lcov", "tseslint", "UUIDV"]
 }

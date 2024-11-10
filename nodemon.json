@@ -1,6 +1,6 @@
 {
   "watch": ["src"],
-  "ext": "ts",
+  "ext": "js,ts,json",
   "ignore": ["src/**/*.spec.ts", "dist/**/*"],
-  "exec": "pnpx ts-node -r tsconfig-paths/register ./src/index.ts"
+  "exec": "ts-node -r tsconfig-paths/register ./src/index.ts"
 }

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "ES2016"
+  },
+  "extends": "../../../tsconfig.json",
+  "include": ["ts-node-import.d.ts"],
+  "exclude": []
+}

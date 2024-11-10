@@ -1,1 +1,2 @@
-export const server = import('./server')
+import appServer from './server'
+export default appServer

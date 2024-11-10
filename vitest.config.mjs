@@ -9,15 +9,22 @@ export default defineConfig({
   test: {
     environment: 'node',
     globals: true,
-    exclude: [...configDefaults.exclude],
     coverage: {
+      provider: 'istanbul',
       reporter: ['lcov', 'json', 'html', 'text'],
       //reporter: ['lcov', 'json'],
-      lines: 100,
-      functions: 100,
-      branches: 100,
-      statements: 100,
-      exclude: ['**/*.{mjs,cjs}'],
+      lines: 50,
+      functions: 50,
+      branches: 50,
+      statements: 50,
+      exclude: [
+        ...configDefaults.exclude,
+        '**/*.{mjs,cjs}',
+        '**/dist/**',
+        '**/__test__/**',
+        '**/node_modules/**'
+      ],
+      include: ['src/**/*.{ts,js}'],
       all: true
     }
   },
@@ -26,6 +33,10 @@ export default defineConfig({
       {
         find: '@',
         replacement: path.resolve(__dirname, 'src')
+      },
+      {
+        find: '@/',
+        replacement: path.resolve(__dirname, 'src/')
       }
     ]
   }

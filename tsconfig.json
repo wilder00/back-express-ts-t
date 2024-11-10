@@ -1,24 +1,30 @@
 {
   "compilerOptions": {
+    "lib": ["ES2023"],
+    //"verbatimModuleSyntax": true,
     /* Language and Environment */
-    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     /* Modules */
-    "module": "commonjs" /* Specify what module code is generated. */,
     //"rootDir": "./src" /* Specify the root folder within your source files. */,
-    // "moduleResolution": "node10",                     /* Specify how TypeScript looks up a file from a given module specifier. */
-    "baseUrl": "./" /* Specify the base directory to resolve non-relative module names. */,
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      //"@/": ["./src/"],
+      "@/*": ["./src/*"],
+      "@/index": ["./src/index.ts"],
+      "@/global.config": ["./src/global.config.ts"]
     } /* Specify a set of entries that re-map imports to additional lookup locations. */,
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
-    // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
-    "types": [
-      "vitest/globals"
-    ] /* Specify type package names to be included without being referenced in a source file. */,
+    //"typeRoots": [] /* Specify multiple folders that act like './node_modules/@types'. */,
+    "types": ["vitest/globals"],
     // "resolveJsonModule": true,                        /* Enable importing .json files. */
     /* JavaScript Support */
-    // "allowJs": true,                                  /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
-    // "checkJs": true,                                  /* Enable error reporting in type-checked JavaScript files. */
+    "allowJs": true /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */,
+    "allowSyntheticDefaultImports": true /* Enable importing default members in modules using TypeScript's 'export default' syntax. */,
+    "checkJs": true /* Enable error reporting in type-checked JavaScript files. */,
     // "maxNodeModuleJsDepth": 1,                        /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
     /* Emit */
     // "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
@@ -51,8 +57,16 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["src/**/*.ts", "__test__/**/*.ts"],
-  "exclude": ["node_modules"],
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "include": [
+    "src/**/*.ts",
+    //"src/**/*.js",
+    //"global.d.ts",
+    "src/**/*.d.ts",
+    "tsconfig.test.json",
+    "__test__/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist"],
   "ts-node": {
     "paths": {
       "@/*": ["./src/*"]
